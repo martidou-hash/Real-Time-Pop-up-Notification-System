@@ -8,4 +8,6 @@ bin/
 obj/
 .DS_Store
 Thumbs.db
-docs/ChatGPT/
+doc/ChatGPT/
+*.pdf
+app.json
