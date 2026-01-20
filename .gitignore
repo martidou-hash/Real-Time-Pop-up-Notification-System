@@ -1,0 +1,11 @@
+.alpackages/
+.vscode/
+*.app
+*.runtime.json
+*.snap
+*.flf
+bin/
+obj/
+.DS_Store
+Thumbs.db
+docs/ChatGPT/

@@ -1,0 +1,129 @@
+/* Popup Notification - CSS Styles */
+/* Modal appears centered over entire interface */
+
+/* Overlay - Covers entire screen */
+.gdrg-notification-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: auto !important;
+}
+
+.gdrg-notification-overlay.show {
+    opacity: 1;
+}
+
+/* Modal container */
+.gdrg-notification-modal {
+    background: #ffffff;
+    /*background: #B2E9ED;*/
+    border-radius: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.0.15);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    font-family: "Segoe UI", "Segoe WP", Segoe, device-segoe, Tahoma, Helvetica, Arial, sans-serif;
+    font-stretch: 100%;
+}
+
+.gdrg-notification-overlay.show .gdrg-notification-modal {
+    transform: scale(1);
+}
+
+/* Header */
+.gdrg-notification-header {
+    padding: 24px 24px 16px 24px;
+    border-bottom: none;
+}
+
+.gdrg-notification-header h2 {
+    font-family: "Segoe UI", "Segoe WP", Segoe, device-segoe, Tahoma, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #1f1f1f;
+}
+
+/* Body */
+.gdrg-notification-body {
+    padding: 2px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.gdrg-notification-body p {
+    font-family: "Segoe UI", "Segoe WP", Segoe, device-segoe, Tahoma, Helvetica, Arial, sans-serif;
+    /*font-stretch: 100%;*/
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+    color: #444444;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Footer */
+.gdrg-notification-footer {
+    padding: 16px 24px;
+    border-top: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Botón aceptar */
+.gdrg-btn-accept {
+    background-color: #008489;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 10px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.gdrg-btn-accept:hover {
+    background-color: #00757a;
+}
+
+.gdrg-btn-accept:active {
+    background-color: #00686c;
+}
+
+.gdrg-btn-accept:focus {
+    outline: 2px solid #008489;
+    outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .gdrg-notification-modal {
+        width: 95%;
+        max-width: none;
+    }
+    
+    .gdrg-notification-header,
+    .gdrg-notification-body,
+    .gdrg-notification-footer {
+        padding: 16px;
+    }
+}
