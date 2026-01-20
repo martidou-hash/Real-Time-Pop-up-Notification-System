@@ -9,5 +9,6 @@ obj/
 .DS_Store
 Thumbs.db
 doc/ChatGPT/
+doc/README.md
 *.pdf
 app.json

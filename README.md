@@ -30,3 +30,5 @@ El código original se utiliza como **inspiración técnica**, habiendo sido pos
 ## Extensibilidad
 
 La solución permite extender cualquier Role Center mediante una pageextension estándar.
+
+Más información [aquí](/doc/Real%20Time%20Pop-up%20Notification%20System.md).
